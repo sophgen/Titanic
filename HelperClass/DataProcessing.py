@@ -27,9 +27,9 @@ class DataProcessing:
     def GetColumnsByType(self, colType):
         return self.X.select_dtypes(include = colType).columns.values.tolist()
     
-    def PopulateFeatureAndLabel(self, label):
-        self.X = self.AllData[self.AllData.columns.difference([label])]
-        self.y = self.AllData[label]
+#   def PopulateFeatureAndLabel(self, label):
+#       self.X = self.X[self.X.columns.difference([label])]
+#       self.y = self.AllData[label]
     
     def PopulateFeatureColumns(self, featureColumns):
         self.X = self.AllData[featureColumns]
