@@ -25,7 +25,7 @@ class DataProcessing:
                 self.AllData[i].fillna('NA', inplace=True)
     
     def GetColumnsByType(self, colType):
-        return self.X.select_dtypes(include = colType).columns.values.tolist()
+        return self.AllData.select_dtypes(include = colType).columns.values.tolist()
     
     def PopulateFeatureColumns(self, featureColumns):
         self.X = self.AllData[featureColumns]
